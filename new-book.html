@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
 
-    <!-- navbar -->
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg bg-dark " data-bs-theme="dark">
     <div class="container-fluid">
       <!-- logo -->
@@ -36,7 +37,7 @@
 
           <!-- navigation link -->
           <li class="nav-item">
-            <li><a class="nav-link active" href="./new-book.html">Aggiungi libro</a></li>
+          <li><a class="nav-link active" href="./new-book.html">Aggiungi libro</a></li>
           <li><a class="nav-link" href="#">Anagrafica Utenti</a></li>
           <li><a class="nav-link" href="#">Storico Prestiti</a></li>
           <li><a class="nav-link" href="#">Help</a></li>
@@ -50,27 +51,75 @@
 
   <!-- main -->
 
-  <div class="container border border-black mt-3">
+  <div class="container mt-3">
     <h1>Nuovo Libro</h1>
 
     <!-- nome e cognome -->
     <div class="row mt-4 mb-3">
       <div class="col-6">
-        <label for="name">Nome Autore</label>
-        <input type="text" class="form-control" id="name" placeholder="Inserisci il nome dell'autore">
+        <label for="nome">Nome Autore</label>
+        <input type="text" class="form-control" id="nome" placeholder="Inserisci il nome dell'autore">
       </div>
       <div class="col-6">
-        <label for="surname">Cognome Autore</label>
-        <input type="text" class="form-control" id="surname" placeholder="Inserisci il cognome dell'autore">
+        <label for="cognome">Cognome Autore</label>
+        <input type="text" class="form-control" id="cognome" placeholder="Inserisci il cognome dell'autore">
       </div>
     </div>
 
     <!-- titolo -->
-     <div>
-      <label for="title">Titolo</label>
-        <input type="text" class="form-control" id="title" placeholder="Inserisci il nome dell'autore">
-        <div id="titleHelp" class="form-text">Titolo versione italiano</div>
-     </div>
+    <div class="mb-3">
+      <label for="titolo">Titolo</label>
+      <input type="text" class="form-control" id="titolo" placeholder="Inserisci il nome dell'autore">
+      <div id="titleHelp" class="form-text">Titolo versione italiano</div>
+    </div>
+
+
+
+    <div class="row mb-3">
+      <!-- genere -->
+      <div class="col-12 col-lg-4 my-2">
+        <label for="genere">Genere</label>
+        <select class="form-select" id="genere" aria-label="Default select example">
+          <option selected>Scegli il genere</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <!-- anno pubblicazione -->
+      <div class="col-12 col-lg-4 my-2">
+        <label for="anno-pubblicazione">Anno di pubblicazione</label>
+        <input type="text" class="form-control" id="anno-pubblicazione" placeholder="Inserisci l'anno">
+      </div>
+
+      <!-- isbn -->
+      <div class="col-12 col-lg-4 my-2">
+        <label for="isbn">ISBN#</label>
+        <input type="text" class="form-control" id="isbn" placeholder="Inserisci ISBN">
+      </div>
+
+    </div>
+
+    <hr class="border border-secondary border-1 opacity-50 mt-5 mb-3">
+
+    <!-- note -->
+    <div>
+      <div class="mb-3">
+        <label for="note" class="form-label">Note</label>
+        <textarea class="form-control" id="note" rows="3" placeholder="Inserisci eventuali note sul libro"></textarea>
+      </div>
+    </div>
+
+    <div>
+      <input class="form-check-input" type="checkbox" value="" id="versione-digitale">
+      <label class="form-check-label" for="versione-digitale">
+        Disponibile anche in digitale
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary my-3">Aggiungi Libro</button>
+
 
   </div>
   <!-- /main -->
@@ -78,9 +127,10 @@
 
 
 
-    <!-- script -->
+  <!-- script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
